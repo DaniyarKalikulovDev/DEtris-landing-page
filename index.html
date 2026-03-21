@@ -597,8 +597,35 @@
     }
 
     @media (max-width: 760px) {
+      .nav-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 72px;
+      }
+
       .nav-links {
+        display: flex;
+        gap: 0;
+      }
+
+      .nav-links li:not(:last-child) {
         display: none;
+      }
+
+      .nav-links .nav-cta {
+        padding: 10px 18px;
+        font-size: 0.95rem;
+      }
+
+      .hero-grid,
+      .how-grid,
+      .features-grid,
+      .problem-grid,
+      .seo-grid,
+      .topics-grid,
+      .screens-column {
+        grid-template-columns: 1fr;
       }
 
       .container,
@@ -607,20 +634,14 @@
         width: min(100%, calc(100% - 28px));
       }
 
-      #hero,
-      #problem,
-      #how,
-      #learn,
-      #features,
-      #seo-copy,
-      #cta {
-        padding-top: 72px;
-        padding-bottom: 72px;
+      .hero-title {
+        font-size: 2.4rem;
+        line-height: 1.1;
       }
 
-      .topics-grid,
-      .screens-column {
-        grid-template-columns: 1fr;
+      .hero-text p,
+      .section-subtitle {
+        font-size: 0.98rem;
       }
 
       .hero-actions,
@@ -631,7 +652,28 @@
 
       .btn-primary,
       .btn-secondary {
+        width: 100%;
         text-align: center;
+      }
+
+      .phone-mockup,
+      .feature-image-card {
+        max-width: 250px;
+      }
+
+      .screen-card img,
+      .feature-image-card img {
+        max-width: 220px;
+        margin: 0 auto;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links {
+        justify-content: center;
       }
     }
   </style>
